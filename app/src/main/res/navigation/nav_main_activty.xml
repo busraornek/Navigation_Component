@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main_activty"
+    app:startDestination="@id/birinciFragment">
+
+    <fragment
+        android:id="@+id/birinciFragment"
+        android:name="com.busraornek.navigation_component.BirinciFragment"
+        android:label="fragment_birinci"
+        tools:layout="@layout/fragment_birinci" >
+        <action
+            android:id="@+id/Ikı_sayfa_gecis"
+            app:destination="@id/ikinciFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ikinciFragment"
+        android:name="com.busraornek.navigation_component.IkinciFragment"
+        android:label="fragment_ikinci"
+        tools:layout="@layout/fragment_ikinci" >
+        <action
+            android:id="@+id/Uc_Sayfa_Gecis"
+            app:destination="@id/sonSayfaFragment"
+            app:popUpTo="@id/ikinciFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/sonSayfaFragment"
+        android:name="com.busraornek.navigation_component.SonSayfaFragment"
+        android:label="fragment_son_sayfa"
+        tools:layout="@layout/fragment_son_sayfa" />
+</navigation>
